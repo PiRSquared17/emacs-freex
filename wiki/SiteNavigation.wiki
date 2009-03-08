@@ -1,4 +1,0 @@
-  * [ProjectHome Project home]
-  * [GettingStarted Getting started]
-  * [Installation Installation]
-  * [Downloads Downloads]
