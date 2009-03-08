@@ -1,5 +1,3 @@
-== Acknowledgments ==
-
 We want to thank the [http://mwolson.org/projects/EmacsMuse.html Muse] developers, since huge chunks of their code provided the foundation for much of the Freex fontification and xml parsing.
 
 We are hugely indebted to [http://pinard.progiciels-bpi.ca/wiki/showPage.yaws?node=home Francois Pinard] for creating and maintaining Pymacs, without which Freex wouldn't have been possible.
