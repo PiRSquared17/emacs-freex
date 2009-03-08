@@ -2,7 +2,7 @@
 
 If you have ADHD, your pulse never drops below 200 beats per minute and you drink Redbull to calm down, this is the tutorial for you.
 
-Step 1 - [http://code.google.com/p/emacs-freex/downloads/list download] and [Installation install] Freex].
+Step 1 - [http://code.google.com/p/emacs-freex/downloads/list download] and [Installation install] Freex.
 
 
 == Creating a journal/scrapbook ==
