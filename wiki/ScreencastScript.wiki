@@ -4,4 +4,4 @@ Open up ~/elisp/freex/freex-conf-test.
 
 Save as freex-conf-demo.el.
 
-Modify add-to-list 'load-path -> "/Users/greg/elisp/freex/"
+Search through looking for 'xxx'.
