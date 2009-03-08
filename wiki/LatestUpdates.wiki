@@ -8,19 +8,19 @@ http://emacs-freex.googlecode.com
 
 Until now, we'd been using Mercurial. It proved to be too much of a pain to import all the history, so I've uploaded a [http://emacs-freex.googlecode.com/files/freex-0.3.3-hg.tar.gz tarball of the full Mercurial repository] when we created the Google Code repository (at the same time we released [http://emacs-freex.googlecode.com/files/freex-0.3.3.tar.gz 0.3.3]).
 
+
 == 22nd October, 2007 ==
 
-Added quickstart.
+Added [Quickstart].
 
-Uploaded v 0.3.2 (tarball).
+Uploaded [http://emacs-freex.googlecode.com/files/freex-0.3.2.tar.gz 0.3.2].
 
-Uploaded [v 0.3.2.
 
 == 19th September 2007 ==
 
-Added basic installation instructions and intro tutorial.
+Added basic [Installation] instructions and [Tutorial].
 
 
 == 16th September 2007 ==
 
-We've just uploaded the first release version, v 0.3.1 (tarball).
+We've just uploaded the first release version, [http://emacs-freex.googlecode.com/files/freex-0.3.1.tar.gz 0.3.1].
