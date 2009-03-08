@@ -1,0 +1,18 @@
+= Latest updates =
+
+== 22nd October, 2007 ==
+
+Added quickstart.
+
+Uploaded v 0.3.2 (tarball).
+
+Uploaded [v 0.3.2.
+
+== 19th September 2007 ==
+
+Added basic installation instructions and intro tutorial.
+
+
+== 16th September 2007 ==
+
+We've just uploaded the first release version, v 0.3.1 (tarball).
