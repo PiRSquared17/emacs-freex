@@ -1,0 +1,7 @@
+This is the script I used when creating the screencast.
+
+Open up ~/elisp/freex/freex-conf-test.
+
+Save as freex-conf-demo.el.
+
+Modify add-to-list 'load-path -> "/Users/greg/elisp/freex/"
