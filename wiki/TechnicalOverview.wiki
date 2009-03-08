@@ -6,37 +6,29 @@ already have things working (see [Installation]).
 
 The main thorny bits of code relate to:
 
- * Interfacing with Pymacs to freex_sqlalchemy.py, to access
-   all the metadata stuff stored in the sqlite database
+ * Interfacing with Pymacs to freex_sqlalchemy.py, to access all the metadata stuff stored in the sqlite database
 
- * Using Emacs' overlays functionality to allow embedded
-   nuggets within nuggets, and also to view and edit
-   metadata
+ * Using Emacs' overlays functionality to allow embedded nuggets within nuggets, and also to view and edit metadata
 
- * Automatically creating implicit links to any text that
-   matches a regex (containing all the nugget aliases in
-   your database)
+ * Automatically creating implicit links to any text that matches a regex (containing all the nugget aliases in your database)
 
-Freex is a minor mode. However, the embedding stuff requires
-us to override the standard saving mechanism, which can make
-interfacing with the major mode complicated in some cases.
+Freex is a minor mode. However, the embedding stuff requires us to override the standard saving mechanism, which can make interfacing with the major mode complicated in some cases.
 
 === freex-conf-test.el ===
 
-This is the sample configuration file, requiring only a few changes to
-get you up and running. It'll give you an idea of the main variables
-to change if you want to play with Freex's major functionality.
+This is the sample configuration file, requiring only a few changes to get you up and running. It'll give you an idea of the main variables to change if you want to play with Freex's major functionality.
 
 === freex-mode.el ===
 
-This defines all the initialization and clenaup for the Freex minor
-mode, including:
- - Checking that the current file is in the freex data
-    directory
- - Setting up basic hooks, default variables and keybindings
- - Adding the buffer-local variables that the buffer needs in
-    order to know how to save itself to the database
- - Initializing fontification
+This defines all the initialization and clenaup for the Freex minor mode, including:
+
+ * Checking that the current file is in the freex data directory
+
+ * Setting up basic hooks, default variables and keybindings
+
+ * Adding the buffer-local variables that the buffer needs in order to know how to save itself to the database
+
+ * Initializing fontification
 
 === freex-embed.el ===
 
