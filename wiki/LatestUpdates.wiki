@@ -1,5 +1,12 @@
 <wiki:toc max_depth="1" />
 
+== 8th March, 2009 ==
+
+Moved the whole of Emacs Freex to be hosted on Google Code:
+
+http://emacs-freex.googlecode.com
+
+
 == 22nd October, 2007 ==
 
 Added quickstart.
