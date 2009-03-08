@@ -1,0 +1,81 @@
+[quick and dirty introduction to keeping a journal using Freex]
+
+You have ADHD. Your pulse never drops below 200 beats per minute and you drink Redbull to calm down. This is the tutorial for you.
+
+Step 1 - [Downloads download and install freex].
+
+
+== Creating a journal/scrapbook ==
+
+Let's say you want to keep a journal, idea-log or scrapbook of some kind. Maybe you're a blogger who wants to keep track of your ideas for future posts. Or a scientist keeping track of experimental results. Or a programmer who wants to keep a log of design and implementation decisions.
+
+You'd like it to be easy to write things down, but find them later. You'd like to be able to tag each entry (or 'nugget' as we're going to term it), search through them etc.
+
+In emacs, run M-x find-file "~/path/to/freex/data/journal.freex". Type something in. Save it.
+
+Now type 'journal'. Notice that it automatically becomes a hyperlink.
+
+Type a couple of entries, e.g.:
+
+----
+22 October 2007
+
+toilet paper ran out today.
+
+
+----
+23 October 2007
+
+got awarded Nobel Prize today. Again.
+
+
+----
+24 October 2007
+
+still no toilet paper. Good job I'm constipated.
+
+
+----
+25 October 2007
+
+no longer constipated. one problem down, but still no toilet
+paper, so I have other problems now.
+
+
+Enough.
+
+Highlight the first entry. Run M-x freex-embed-define-region-as-nugget, and enter "journal - 22 October 2007". Save.
+
+Notice that the region you highlighted now has a grey background. You just created a nugget called 'journal - 22 October 2007" that is embedded within "journal". In other words, you can have nuggets embedded within other nuggets. You can run M-x find-file "journal - 22 October 2007.freex", and you'll see your entry. Try editing it and save. Now, go back to "journal" and run M-x revert-buffer. It should have updated to reflect your changes.
+
+Let's tag our first entry now. Put the cursor inside the first entry, and run M-x freex-meta-edit-tag-parents-in-minibuffer. You should see "journal/22 October 2007/". In other words, your first entry is tagged with (i.e. belongs to) "journal" and "22 October 2007". Let's also tag it with "toilet paper".
+
+Now, highlight the second entry, define that as a nugget called "journal - 23 October 2007" just as before, and tag it with "Nobel Prize". Now, Nobel Prize will show up as a link too, though you might have to edit the text nearby to make emacs notice that it's there.
+
+Highlight the third entry, name it, and tag it with "toilet paper" and "constipated".
+
+Close all your buffers. Let's pretend that you're trying to find that nugget you wrote about toilet paper and being constipated so that you can recount the story at a dinner party. Run M-x freex-meta-find and enter "toi[TAB]". It'll complete to "toilet paper". We want the nuggets that belong to "toilet paper" though, not "toilet paper" itself, so put in "toilet paper/[TAB]". If this was a file system, this would be like saying "which files are in the 'toilet paper' directory?". But we're not in Kansas any more, as you'll begin to see.
+
+If you've been paying attention this far, then you'll see something like this:
+
+Possible completions are:
+toilet paper/22 October 2007/	   toilet paper/24 October 2007/
+toilet paper/constipated/	   toilet paper/journal - 22 October 2007
+toilet paper/journal - 24 October 2007
+toilet paper/journal/
+
+Think of anything with a "/" on the end as a kind of subdirectory, i.e. a category that you could use to further whittle down the list of items that belong to "toilet paper". In this case, you could usefully whittle things down with the date, or by "constipated", so let's try that. Enter "toilet paper/constipated/[TAB]". Sure enough, it should complete to "toilet paper/constipated/journal - 24 October 2007", the only nugget that is tagged with both "toilet paper" and "constipated".
+
+You could experiment by running M-x freex-meta-find and some of the following queries:
+
+  journal/
+
+  constipated/
+
+  toilet paper/"other problems now"/
+
+  toilet paper//
+
+  toilet paper//*
+
+Hmmmm. My aim was to tell you enough to be dangerous. Not dangerous like a man aiming at a cow with a shoulder-mounted rocket launcher is dangerous, but dangerous enough to be getting on with. Maybe try the more technical, introductory tutorial now.
