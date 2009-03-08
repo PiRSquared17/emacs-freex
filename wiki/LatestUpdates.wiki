@@ -6,7 +6,7 @@ Moved the whole of Emacs Freex to be hosted on Google Code:
 
 http://emacs-freex.googlecode.com
 
-Until now, we'd been using Mercurial. It proved to be too much of a pain to import all the history, so I've uploaded a [http://emacs-freex.googlecode.com/files/freex-0.3.3-hg.tar.gz tarball of the full Mercurial repository when we created the Google Code repository (at the same time we released [http://emacs-freex.googlecode.com/files/freex-0.3.3.tar.gz 0.3.3]).
+Until now, we'd been using Mercurial. It proved to be too much of a pain to import all the history, so I've uploaded a [http://emacs-freex.googlecode.com/files/freex-0.3.3-hg.tar.gz tarball of the full Mercurial repository] when we created the Google Code repository (at the same time we released [http://emacs-freex.googlecode.com/files/freex-0.3.3.tar.gz 0.3.3]).
 
 == 22nd October, 2007 ==
 
