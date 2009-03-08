@@ -32,15 +32,11 @@ This defines all the initialization and clenaup for the Freex minor mode, includ
 
 === freex-embed.el ===
 
-Provides the mechanisms for embedding nuggets within other nuggets,
-using Emacs overlays. This also includes the Freex-specific save
-mechanism, which handles saving embedded overlays, and mirroring the
-contents to the database.
+Provides the mechanisms for embedding nuggets within other nuggets, using Emacs overlays. This also includes the Freex-specific save mechanism, which handles saving embedded overlays, and mirroring the contents to the database.
 
 === Embedding ===
 
-If you want to embed a nugget or some
-metadata, then you include an xml element, such as:
+If you want to embed a nugget or some metadata, then you include an xml element, such as:
 
 <code>
 <example>
@@ -48,39 +44,24 @@ metadata, then you include an xml element, such as:
 </example>
 </code>
 
-and then run freex-embed-buffer. That calls on freex-xml.el to go
-through the buffer, looks for such xml elements,
+and then run freex-embed-buffer. That calls on freex-xml.el to go through the buffer, looks for such xml elements,
 
-The process of embedding a nugget replaces the
-<example><file>...</file></example> xml element, with an overlay
-containing the contents of the file specified. Importantly, every
+The process of embedding a nugget replaces the <example><file>...</file></example> xml element, with an overlay containing the contents of the file specified. Importantly, every
 freex overlay contains various properties, such as:
 
  * 'id' relates to the nugget id field in the database
 
- * 'insert-funct' tells the overlay which function to use to get its
-   contents from
+ * 'insert-funct' tells the overlay which function to use to get its contents from
 
- * 'save-funct' tells the overlay which function to call at save to
-   store its contents
+ * 'save-funct' tells the overlay which function to call at save to store its contents
 
-In this way, you can easily create new xml elements, and by specifying
-an insert-funct and save-funct, you can make them do anything you
-like.
+In this way, you can easily create new xml elements, and by specifying an insert-funct and save-funct, you can make them do anything you like.
 
-Notably, freex buffers themselves have a buffer-local
-'freex-embed-ov-props' variable, so that the buffer knows which nugget
-in the database it relates to.
+Notably, freex buffers themselves have a buffer-local 'freex-embed-ov-props' variable, so that the buffer knows which nugget in the database it relates to.
 
 == freex-fontify.el ==
 
-Provides all the font-lock mechanisms for going through your buffer,
-looking for xml elements and implicit links with various complicated
-regexes. The implicit link regular expression can get pretty huge,
-because it's basically a big chain of disjunctions including every
-alias in your database. If you have lots of nuggets, this can bring
-Emacs' regex engine to its knees, and so we actually run the regex in
-python.
+Provides all the font-lock mechanisms for going through your buffer, looking for xml elements and implicit links with various complicated regexes. The implicit link regular expression can get pretty huge, because it's basically a big chain of disjunctions including every alias in your database. If you have lots of nuggets, this can bring Emacs' regex engine to its knees, and so we actually run the regex in python.
 
 == freex-xml.el ==
 
@@ -88,8 +69,7 @@ Convenience functions for dealing with xml elements.
 
 == freex-meta.el ==
 
-This is the main gateway between Emacs and the database, via
-freex_sqlalchemy:
+This is the main gateway between Emacs and the database, via freex_sqlalchemy:
 
  * Connects to the database
 
@@ -115,8 +95,7 @@ This contains all the python code for interacting with the databse:
 
 == freex-timestamp.el ==
 
-This updates the database with a timestamp every time a freex nugget
-is modified.
+This updates the database with a timestamp every time a freex nugget is modified.
 
 == freex_sqlalchemy_test.py ==
 
@@ -124,7 +103,7 @@ Lots of unit tests for all the python database functions.
 
 == run_tests ==
 
-Handy alias for running the python unit tests (using the [http://wiki.python.org/moin/TestOob testoob] or the unittest framework).
+Handy alias for running the python unit tests (using the [http://wiki.python.org moin/TestOob testoob] or the unittest framework).
 
 == freex.el ==
 
