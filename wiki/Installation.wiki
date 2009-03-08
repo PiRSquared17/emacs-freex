@@ -51,11 +51,11 @@ Other systems
 On any other system, you'll have to see if there's some other package or binary you can use, or follow the [http://pymacs.progiciels-bpi.ca/manual/Installation.html#Installation Pymacs installation instructions].
 
 
-== Installing Freex itself ==
+== Installing and configuring Freex itself ==
 
 Download and untar the latest stable release Freex tarball from the [http://code.google.com/p/emacs-freex/downloads/list downloads page] (which should be called something like 'freex-x.x.x.tar.gz'). Inside, you'll see a file called 'freex-conf-test.el.'. This provides an example configuration file. Make a copy and call it something like 'freex-conf.el' - you can store it with your Freex scripts, or put with your other elisp init files as you prefer.
 
-Go through your new freex-conf.el and modify any references to '/home/greg/elisp/freex' to the location containing your Freex scripts. Also, change the value of the 'freex-mode-dir' variable from '/home/greg/elisp/freex/testdocs/' to wherever you'd like to store the text files containing your hard-won wisdom. It makes sense to keep this 'data' directory separate from the 'scripts' directory. Create your data directory now.
+Go through your new freex-conf.el and modify any references to '/Users/greg/elisp/freex' to the location containing your Freex scripts. Also, change the value of the 'freex-mode-dir' variable from '/Users/greg/elisp/freex/testdocs/' to wherever you'd like to store the text files containing your hard-won wisdom. It makes sense to keep this 'data' directory separate from the 'scripts' directory. Create your data directory now.
 
 If you want to make sure that Freex mode loads up every time you start Emacs in future, just add these lines to your .emacs file:
 
