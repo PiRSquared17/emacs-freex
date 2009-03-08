@@ -1,3 +1,5 @@
+Emacs Freex mode is a minor mode for organizing and editing a massively-hyperlinked database of your notes and ideas
+
 In order to follow along with the screencast, first:
 
  * Head to http://emacs-freex.googlecode.com.
