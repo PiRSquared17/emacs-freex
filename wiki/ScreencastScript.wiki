@@ -1,4 +1,6 @@
-Emacs Freex mode helps you organize and edit a massively-hyperlinked database of your notes and ideas. It's a personal wiki on steroids.
+Hi. I'm Greg Detre. With Per Sederberg, I'm the co-author of Emacs Freex mode.
+
+Emacs Freex mode helps you organize and edit a massively-hyperlinked database of your notes and ideas. It's a personal wiki on steroids, all within Emacs.
 
 In order to follow along with the screencast, first:
 
@@ -16,10 +18,9 @@ In order to follow along with the screencast, first:
     * (add-to-list 'load-path "/Users/greg/elisp/freex")
     * (load "freex-conf-demo")
 
+Let's say you want to keep a journal, idea-log or scrapbook of some kind. You want it to be easy to add and edit your notes, but have powerful tagging and searching capabilities.
 
-Let's say you want to keep a journal, idea-log or scrapbook of some kind. Maybe you're a blogger who wants to keep track of your ideas for future posts. Or a scientist keeping track of experimental results. Or a programmer who wants to keep a log of design and implementation decisions.
-
-You'd like it to be easy to write things down, but find them later. You'd like to be able to tag each entry (or 'nugget' as we're going to term it), search through them etc.
+Let's start by creating a journal.
 
  * M-x freex-meta-find 'journal'. Type something in ('hello'). Save it.
 
