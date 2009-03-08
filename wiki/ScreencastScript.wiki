@@ -80,20 +80,14 @@ Let's pretend that you're trying to find that nugget you wrote about toilet pape
 
 If this was a file system, this would be like saying "which files are in the 'toilet paper' directory?". But we're not in Kansas any more, as you'll begin to see.
 
-Think of anything with a "/" on the end as a kind of subdirectory, i.e. a category that you could use to further whittle down the list of items that belong to "toilet paper". In this case, you could usefully whittle things down with the date, or by "constipated", so let's try that. Enter "toilet paper/constipated/[TAB]". Sure enough, it should complete to "toilet paper/constipated/journal - 24 October 2007", the only nugget that is tagged with both "toilet paper" and "constipated".
+Think of anything with a "/" on the end as a kind of subdirectory, i.e. a category that you could use to further whittle down the list of items that belong to "toilet paper". In this case, you could usefully whittle things down with the date, or by "constipated", so let's try that.
 
-You could experiment by running M-x freex-meta-find and some of the following queries:
+ * Enter "toilet paper/constipated/[TAB]".
 
-<code>
-  journal/
+Sure enough, it should complete to "toilet paper/constipated/journal - 24 October 2007", the only nugget that is tagged with both "toilet paper" and "constipated".
 
-  constipated/
+ * Try looking for M-x freex-meta-find toilet paper/"other problems now"/
 
-  toilet paper/"other problems now"/
-
-  toilet paper//
-
-  toilet paper//*
-</code>
+ * toilet paper//*
 
 Hmmmm. My aim was to tell you enough to be dangerous. Not dangerous like a man aiming at a cow with a shoulder-mounted rocket launcher is dangerous, but dangerous enough to be getting on with. Maybe try the more technical, introductory [Tutorial] now.
