@@ -2,7 +2,7 @@
 
 If you're interested in hacking the Freex source code, this
 is a high-level guide for what's what. It assumes that you
-already have things working (see [[install]]).
+already have things working (see [Installation]).
 
 The main thorny bits of code relate to:
 
