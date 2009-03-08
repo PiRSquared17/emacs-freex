@@ -1,14 +1,19 @@
-This is the script I used when creating the screencast.
+In order to follow along with the screencast, first:
 
  * Head to http://emacs-freex.googlecode.com.
 
  * Download and install Freex.
 
- * Open up ~/elisp/freex/freex-conf-test.
+ * Open up ~/path/to/freex/scripts/freex-conf-test.el.
 
  * Save as freex-conf-demo.el.
 
- * Search through looking for 'xxx'.
+ * Search through looking for 'xxx', and change appropriately.
+
+ * Add these lines to your .emacs file:
+    * (add-to-list 'load-path "/Users/greg/elisp/freex")
+    * (load "freex-conf-demo")
+
 
 Let's say you want to keep a journal, idea-log or scrapbook of some kind. Maybe you're a blogger who wants to keep track of your ideas for future posts. Or a scientist keeping track of experimental results. Or a programmer who wants to keep a log of design and implementation decisions.
 
