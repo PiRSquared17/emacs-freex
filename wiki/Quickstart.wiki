@@ -1,8 +1,8 @@
-[quick and dirty introduction to keeping a journal using Freex]
+(quick and dirty introduction to keeping a journal using Freex)
 
 You have ADHD. Your pulse never drops below 200 beats per minute and you drink Redbull to calm down. This is the tutorial for you.
 
-Step 1 - [Downloads download and install freex].
+Step 1 - [http://code.google.com/p/emacs-freex/downloads/list download and install freex].
 
 
 == Creating a journal/scrapbook ==
@@ -17,6 +17,7 @@ Now type 'journal'. Notice that it automatically becomes a hyperlink.
 
 Type a couple of entries, e.g.:
 
+<code>
 ----
 22 October 2007
 
@@ -40,11 +41,11 @@ still no toilet paper. Good job I'm constipated.
 
 no longer constipated. one problem down, but still no toilet
 paper, so I have other problems now.
-
+</code>
 
 Enough.
 
-Highlight the first entry. Run M-x freex-embed-define-region-as-nugget, and enter "journal - 22 October 2007". Save.
+Highlight the first entry. Run <code>M-x freex-embed-define-region-as-nugget</code>, and enter "journal - 22 October 2007". Save.
 
 Notice that the region you highlighted now has a grey background. You just created a nugget called 'journal - 22 October 2007" that is embedded within "journal". In other words, you can have nuggets embedded within other nuggets. You can run M-x find-file "journal - 22 October 2007.freex", and you'll see your entry. Try editing it and save. Now, go back to "journal" and run M-x revert-buffer. It should have updated to reflect your changes.
 
@@ -58,16 +59,19 @@ Close all your buffers. Let's pretend that you're trying to find that nugget you
 
 If you've been paying attention this far, then you'll see something like this:
 
+<code>
 Possible completions are:
 toilet paper/22 October 2007/	   toilet paper/24 October 2007/
 toilet paper/constipated/	   toilet paper/journal - 22 October 2007
 toilet paper/journal - 24 October 2007
 toilet paper/journal/
+</code>
 
 Think of anything with a "/" on the end as a kind of subdirectory, i.e. a category that you could use to further whittle down the list of items that belong to "toilet paper". In this case, you could usefully whittle things down with the date, or by "constipated", so let's try that. Enter "toilet paper/constipated/[TAB]". Sure enough, it should complete to "toilet paper/constipated/journal - 24 October 2007", the only nugget that is tagged with both "toilet paper" and "constipated".
 
 You could experiment by running M-x freex-meta-find and some of the following queries:
 
+<code>
   journal/
 
   constipated/
@@ -77,5 +81,6 @@ You could experiment by running M-x freex-meta-find and some of the following qu
   toilet paper//
 
   toilet paper//*
+</code>
 
-Hmmmm. My aim was to tell you enough to be dangerous. Not dangerous like a man aiming at a cow with a shoulder-mounted rocket launcher is dangerous, but dangerous enough to be getting on with. Maybe try the more technical, introductory tutorial now.
+Hmmmm. My aim was to tell you enough to be dangerous. Not dangerous like a man aiming at a cow with a shoulder-mounted rocket launcher is dangerous, but dangerous enough to be getting on with. Maybe try the more technical, introductory [Tutorial] now.
