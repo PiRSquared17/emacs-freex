@@ -1,4 +1,4 @@
-= Latest updates =
+#sidebar TableOfContents
 
 == 22nd October, 2007 ==
 
