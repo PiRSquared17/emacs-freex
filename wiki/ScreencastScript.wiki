@@ -1,3 +1,5 @@
+(this is the script for [http://emacs-freex.googlecode.com/files/freex_screencast_090308c.mov freex_screencast_090308c.mov])
+
 Hi. I'm Greg Detre. With Per Sederberg, I'm the co-author of Emacs Freex mode.
 
 Emacs Freex mode helps you organize and edit a massively-hyperlinked database of your notes and ideas. It's a personal wiki on steroids, all within Emacs.
