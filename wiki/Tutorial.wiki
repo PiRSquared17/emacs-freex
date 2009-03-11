@@ -1,4 +1,4 @@
-This is a moderately techical tutorial that also shows you some of the backend.
+This is a moderately technical tutorial that also shows you some of the backend.
 
 
 == Creating our first nuggets ==
@@ -19,7 +19,7 @@ Time to create another nugget. Let's call it 'lisp.freex'. Fill it with some tex
 
     _The girl replies, "Yeth, and I'm only 14!"_
 
-Notice that if you type 'emacs' now, place the cursor on it, and press ENTER, you will be magically transported to the 'emacs' nugget.
+Notice that if you type 'emacs' now, place the cursor on it, and press SHIFT-ENTER, you will be magically transported to the 'emacs' nugget.
 
 (We use the term 'nugget' throughout to mean 'document' or 'piece of text', since nuggets will not always equate to files. More on this later.)
 
@@ -51,6 +51,8 @@ and enter the following query:
 <code>
     select * from nuggets;
 </code>
+
+(N.B. for some reason, the asterisk characters aren't showing up in the code sections...)
 
 This is a very simple SQL query that's asking the database to tell us everything it knows about the nuggets in our database. It reports back:
 
