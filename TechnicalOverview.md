@@ -1,0 +1,121 @@
+## Introduction ##
+
+If you're interested in hacking the Freex source code, this
+is a high-level guide for what's what. It assumes that you
+already have things working (see [Installation](Installation.md)).
+
+The main thorny bits of code relate to:
+
+  * Interfacing with Pymacs to freex\_sqlalchemy.py, to access all the metadata stuff stored in the sqlite database
+
+  * Using Emacs' overlays functionality to allow embedded nuggets within nuggets, and also to view and edit metadata
+
+  * Automatically creating implicit links to any text that matches a regex (containing all the nugget aliases in your database)
+
+Freex is a minor mode. However, the embedding stuff requires us to override the standard saving mechanism, which can make interfacing with the major mode complicated in some cases.
+
+### freex-conf-test.el ###
+
+This is the sample configuration file, requiring only a few changes to get you up and running. It'll give you an idea of the main variables to change if you want to play with Freex's major functionality.
+
+### freex-mode.el ###
+
+This defines all the initialization and clenaup for the Freex minor mode, including:
+
+  * Checking that the current file is in the freex data directory
+
+  * Setting up basic hooks, default variables and keybindings
+
+  * Adding the buffer-local variables that the buffer needs in order to know how to save itself to the database
+
+  * Initializing fontification
+
+### freex-embed.el ###
+
+Provides the mechanisms for embedding nuggets within other nuggets, using Emacs overlays. This also includes the Freex-specific save mechanism, which handles saving embedded overlays, and mirroring the contents to the database.
+
+### Embedding ###
+
+If you want to embed a nugget or some metadata, then you include an xml element, such as:
+
+```
+
+<file>blah.freex
+
+Unknown end tag for &lt;/file&gt;
+
+
+```
+
+and then run freex-embed-buffer. That calls on freex-xml.el to go through the buffer, looks for such xml elements,
+
+The process of embedding a nugget replaces the 
+
+&lt;file&gt;
+
+...
+
+&lt;/file&gt;
+
+ xml element, with an overlay containing the contents of the file specified. Importantly, every
+freex overlay contains various properties, such as:
+
+  * 'id' relates to the nugget id field in the database
+
+  * 'insert-funct' tells the overlay which function to use to get its contents from
+
+  * 'save-funct' tells the overlay which function to call at save to store its contents
+
+In this way, you can easily create new xml elements, and by specifying an insert-funct and save-funct, you can make them do anything you like.
+
+Notably, freex buffers themselves have a buffer-local 'freex-embed-ov-props' variable, so that the buffer knows which nugget in the database it relates to.
+
+## freex-fontify.el ##
+
+Provides all the font-lock mechanisms for going through your buffer, looking for xml elements and implicit links with various complicated regexes. The implicit link regular expression can get pretty huge, because it's basically a big chain of disjunctions including every alias in your database. If you have lots of nuggets, this can bring Emacs' regex engine to its knees, and so we actually run the regex in python.
+
+## freex-xml.el ##
+
+Convenience functions for dealing with xml elements.
+
+## freex-meta.el ##
+
+This is the main gateway between Emacs and the database, via freex\_sqlalchemy:
+
+  * Connects to the database
+
+  * Sets various variables (e.g. location of freex data directory)
+
+  * Deals with embedded metadata overlays
+
+  * Defines various elements (e.g. tag-parents/children, aliases)
+
+  * Updates database when the filesystem changes
+
+  * Freex file finding and tab completion
+
+## freex\_sqlalchemy.py ##
+
+This contains all the python code for interacting with the databse:
+
+  * initializing a new database
+
+  * adding, removing and modifying nuggets
+
+  * querying
+
+## freex-timestamp.el ##
+
+This updates the database with a timestamp every time a freex nugget is modified.
+
+## freex\_sqlalchemy\_test.py ##
+
+Lots of unit tests for all the python database functions.
+
+## run\_tests ##
+
+Handy alias for running the python unit tests (using the [testoob](http://wiki.python.org/moin/TestOob) or the unittest framework).
+
+## freex.el ##
+
+A few utility functions
